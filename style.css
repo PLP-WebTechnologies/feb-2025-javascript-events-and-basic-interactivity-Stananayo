@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+button:active {
+    background-color: #0056b3;
+    color: white;
+}
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 42px); /* Adjust for padding and border */
+}
+.slideshow-container {
+    position: relative;
+    max-width: 600px; /* Adjust as needed */
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.fade {
+    animation: fade 1s ease;
+}
+
+@keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+}
+
+.tab-content {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 5px;
+    display: none; /* Initially hide all */
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.feedback {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+.tab-content {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.gallery-image {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.gallery-image:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+.feedback {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+.success {
+    color: green;
+}
+.error {
+    color: red;
+}
+.warning {
+    color: orange;
+}
+/* Tab styles */
+.tab {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .gallery-image {
+        width: 80px;
+    }
+    button {
+        width: 100%;
+    }
+}
+.welcome-message {
+    font-size: 24px;
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}

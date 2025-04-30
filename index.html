@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript Event Playground</title>
+</head>
+<body>
+    <h1>Welcome to the JavaScript Playground!</h1>
+
+    <button id="interactiveButton">Click Me!</button>
+
+    <!-- Welcome Message -->
+    <div id="welcomeMessage" class="welcome-message hidden">Welcome!</div>
+
+    <!-- Image Slideshow -->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="image1.jpg" class="slideshow-image" alt="Description of image 1">
+        </div>
+        <div class="mySlides fade">
+            <img src="image2.jpg" class="slideshow-image" alt="Description of image 2" title="Image 2">
+        </div>
+        <div class="mySlides fade">
+            <img src="image3.jpg" class="slideshow-image" alt="Description of image 3" title="Image 3">
+        </div>
+    </div>
+    <br>
+    <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+    <button class="next" onclick="plusSlides(1)">&#10095;</button>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="tab-link" data-tab="tab1">About Us</button>
+        <button class="tab-link" data-tab="tab2">Contact</button>
+    </div>
+
+    <div id="tab1" class="tab-content">
+        <h2>About Us</h2>
+        <p>We are a team of passionate developers dedicated to creating innovative solutions that simplify and enhance user experiences. Our focus is on leveraging modern technologies to deliver quality software to our clients.</p>
+        
+        <h3>Our Values</h3>
+        <ul>
+            <li>Integrity</li>
+            <li>Collaboration</li>
+            <li>Innovation</li>
+            <li>Excellence</li>
+        </ul>
+        
+        <h3>Our Services</h3>
+        <p>We offer a range of services, including:</p>
+        <ol>
+            <li>Web Development</li>
+            <li>Mobile App Development</li>
+            <li>UI/UX Design</li>
+            <li>Consulting</li>
+        </ol> 
+    </div>
+
+    <div id="tab2" class="tab-content hidden">
+        <h2>Contact Us</h2>
+        <p>If you'd like to get in touch, please use the form below or reach out via our social media channels.</p>
+        
+        <h3>Contact Form</h3>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="emailContact">Email:</label>
+            <input type="email" id="emailContact" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+        
+        <h3>Follow Us</h3>
+        <p>Stay connected through our social media:</p>
+        <ul>
+            <li><a href="https://twitter.com">Twitter</a></li>
+            <li><a href="https://facebook.com">Facebook</a></li>
+            <li><a href="https://linkedin.com">LinkedIn</a></li>
+        </ul>
+    </div>
+
+    <form id="validationForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <span id="emailFeedback" class="feedback"></span>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required minlength="8">
+        <span id="passwordFeedback" class="feedback"></span>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
